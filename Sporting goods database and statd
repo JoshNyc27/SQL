@@ -1,0 +1,31 @@
+--Create a sporting goods database
+
+Create table Modells (id integer primary key, item text, size text, aisle integer, price integer);
+
+INSERT into modells values(1,'glove','large',8,12);
+INSERT into modells values( 2,'shirt', 'small',3,10); 
+INSERT into modells values(3,'cap','med',5,9);
+INSERT into modells values(4, 'shorts','large',3,20);
+INSERT into modells values(5,'jersey','smalll',8,22);
+insert into modells values(6,'shoes','XL',7,35);
+insert into modells values(7,'golfballs','small', 6,12);
+insert into modells values(8,'cleats','med',7,45);
+insert into modells values(9,'racket','XL',1,35);
+insert into modells values(10,'yogamatt','small',3,13);
+insert into modells values(11,'slippers','med',7,15);
+Insert into modells values(12,'socks','small',5,7);
+Insert into modells values(13,'headeband','XL',5,6);
+Insert into modells values(14,'sneakers','med',7,70);
+Insert into modells values(15,'baseballbat','large',8,90);
+
+- Display the database ordered by price
+Select * FROM Modells
+Order by Price Desc;
+
+what is the avg price of items in aisle 8? 
+Select AVG(price) "AVG aisle item price"
+from Modells where aisle=8;
+
+What are the most expensive item by price in each aisle?
+Select item, aisle,price from modells order by aisle desc;
+
